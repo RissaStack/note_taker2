@@ -16,4 +16,8 @@ app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 // app.listen(PORT, () => console.log(`app listening http://localhost:3001`));
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+// app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});

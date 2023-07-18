@@ -33,9 +33,15 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-    console.log(req.params.id);
+    idToDelete = req.params.id;
+
     readFromFile('db/db.json').then((notes) => {
         let parsedNotes = JSON.parse(notes);
+        const filtered = parsedNotes.filter((note) => note.id !== idToDelete);
+
+        writeToFile('db/db.json', JSON.stringify(filtered)).then(() => {
+            res.sendStatus(204);
+        });
     });
 });
 

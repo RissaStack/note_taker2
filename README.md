@@ -11,6 +11,7 @@ To install the dependencies needed for this application, you can run 'npm i'. Th
 # Usage
 
 This tool is used to keep track of any notes you made need. You can keep to-do lists, note for a class or project, or even step for a recipe. There are endless possibilities for this application.
+Or you can go to this link https://the-note-taker-2-95a30228ba10.herokuapp.com/
 
 # Images of Application
 
